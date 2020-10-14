@@ -36,7 +36,7 @@ public class ExcelReader {
 		
 		ArrayList<String> records = new ArrayList<String>();
 		
-file= new FileInputStream("C:\\Users\\848829\\eclipse-workspace\\clearTrip\\src\\test\\java\\com\\clearTrip\\testData\\Bookings.xlsx");
+file= new FileInputStream("C:\\Users\\848829\\git\\clearTrip\\clearTrip\\src\\test\\java\\com\\clearTrip\\testData\\Bookings.xlsx");
 workbook=new XSSFWorkbook(file);
 sheet=workbook.getSheet("Sheet1");
 int rows=sheet.getLastRowNum();
