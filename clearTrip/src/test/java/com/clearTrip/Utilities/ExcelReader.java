@@ -78,69 +78,8 @@ return records;
 
 	}
 	
-	
-	
-	
-	public String[] readExcel() throws IOException
-	{
-		
-		file= new FileInputStream("C:\\Users\\848829\\eclipse-workspace\\clearTrip\\src\\test\\java\\com\\clearTrip\\testData\\Bookings.xlsx");
-		workbook=new XSSFWorkbook(file);
-		sheet=workbook.getSheet("Sheet1");
-		int rows=sheet.getLastRowNum();
-
-		String records[]=new String[10];
-
-		for(int i=1;i<=rows;i++)
-		{
-			 currentrow=sheet.getRow(i);
-			
-			String from=currentrow.getCell(0).getStringCellValue();
-			String to=currentrow.getCell(1).getStringCellValue();
-			Date departureDate=currentrow.getCell(2).getDateCellValue();
-			Date returnDate=currentrow.getCell(3).getDateCellValue();
-			
-			
-			
-			DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
-			
-			
-			Date date1=departureDate;
-			String depDate=df.format(date1);
-			
-			Date date2=returnDate;
-			String retDate=df.format(date2);
-		
-		records= new String[] {from,to,depDate,retDate};
-		
-		
-		
-	}
-		System.out.println();
-		workbook.close();
-		
-		return records;
-
 }
 	
 	
 	
 	
-	
-	public String readExcelData(int row,int column) throws IOException
-	{
-		file= new FileInputStream("C:\\Users\\848829\\eclipse-workspace\\clearTrip\\src\\test\\java\\com\\clearTrip\\testData\\Bookings.xlsx");
-		workbook=new XSSFWorkbook(file);
-		sheet=workbook.getSheet("Sheet1");
-		//int rows=sheet.getLastRowNum();
-		
-		 DataFormatter dataFormatter = new DataFormatter();
-
-		currentrow=sheet.getRow(row);
-		
-		 String cellValue = dataFormatter.formatCellValue(currentrow.getCell(column));
-		
-		return cellValue;
-		
-	}
-}

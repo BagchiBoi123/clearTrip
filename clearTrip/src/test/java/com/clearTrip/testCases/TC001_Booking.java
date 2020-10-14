@@ -25,7 +25,6 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.clearTrip.Utilities.CaptureSreenshot;
 import com.clearTrip.Utilities.DatePicker;
-import com.clearTrip.Utilities.ExcelUtility;
 import com.clearTrip.pageObjects.BookFlights;
 import com.clearTrip.pageObjects.SearchFlights;
 

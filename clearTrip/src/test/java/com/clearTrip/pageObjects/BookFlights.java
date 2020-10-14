@@ -20,7 +20,7 @@ WebDriver driver;
 	@FindBy(xpath="//p[contains(text(),'12:10')]")
 	WebElement selectDesiredDepFlight;
 	
-	@FindBy(xpath="//p[contains(text(),'11:41')]")
+	@FindBy(xpath="//p[contains(text(),'11:40')]")
 	WebElement selectDesiredRetFlight;
 	
 	public void BookDesiredDepartureFlight()
