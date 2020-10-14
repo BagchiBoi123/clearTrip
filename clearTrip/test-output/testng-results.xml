@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="96630" started-at="2020-10-10T08:06:55Z" finished-at="2020-10-10T08:08:32Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="96630" started-at="2020-10-10T08:06:55Z" finished-at="2020-10-10T08:08:32Z">
+      <class name="com.clearTrip.testCases.TC001_Booking">
+        <test-method status="PASS" signature="driverSetup()[pri:0, instance:com.clearTrip.testCases.TC001_Booking@91161c7]" name="driverSetup" is-config="true" duration-ms="18320" started-at="2020-10-10T13:36:55Z" finished-at="2020-10-10T13:37:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverSetup -->
+        <test-method status="PASS" signature="searchFlight()[pri:0, instance:com.clearTrip.testCases.TC001_Booking@91161c7]" name="searchFlight" duration-ms="76367" started-at="2020-10-10T13:37:14Z" finished-at="2020-10-10T13:38:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchFlight -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.clearTrip.testCases.TC001_Booking@91161c7]" name="closeBrowser" is-config="true" duration-ms="1913" started-at="2020-10-10T13:38:30Z" finished-at="2020-10-10T13:38:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.clearTrip.testCases.TC001_Booking -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
