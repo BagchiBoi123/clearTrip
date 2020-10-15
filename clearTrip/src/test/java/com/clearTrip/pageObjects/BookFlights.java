@@ -16,6 +16,9 @@ WebDriver driver;
 	}
 	
 	
+	@FindBy(xpath="//p[contains(text(),'Afternoon')][1]")
+	WebElement departureTime;
+	
 	
 	@FindBy(xpath="//p[contains(text(),'12:10')]")
 	WebElement selectDesiredDepFlight;
@@ -23,6 +26,14 @@ WebDriver driver;
 	@FindBy(xpath="//p[contains(text(),'11:40')]")
 	WebElement selectDesiredRetFlight;
 	
+	
+	
+	public void selectDepartureTime()
+	{
+		departureTime.click();
+	}
+	
+
 	public void BookDesiredDepartureFlight()
 	{
 		selectDesiredDepFlight.click();

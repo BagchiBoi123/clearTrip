@@ -2,20 +2,18 @@ package com.clearTrip.testCases;
 
 
 import java.io.IOException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.JavascriptExecutor;
+import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -36,7 +34,7 @@ public class TC001_Booking extends BaseClass {
 	
 	BookFlights bFlights;
 	
-	Logger logger=Logger.getLogger(TC001_Booking.class);
+	Logger logger=LogManager.getLogger(TC001_Booking.class);
 	
 	public ExtentHtmlReporter htmlReporter;
 	
@@ -79,21 +77,56 @@ public class TC001_Booking extends BaseClass {
 		extent.flush();
 	}
 	
-
+	
 	@Test(priority=0)
-	 public void search() throws InterruptedException, IOException
+	public void verifyTitle() {
+		
+		test=extent.createTest("Verify Page Title");
+		
+		logger.info("==============================Verifying Page Title==========================");
+		
+		String actual=driver.getTitle();
+		
+		String expected="#1 Site for Booking Flights, Hotels, Packages, Trains & Local activities.";
+		
+		Assert.assertEquals(actual, expected, "This isn't the webpage we are working on");
+		
+		
+	}
+	
+	
+	
+	@Test(priority=1)
+	public void smoke() throws InterruptedException {
+		
+		test=extent.createTest("Check if from and to textboxes are enabled or not");
+		
+		logger.info("====================================Checking From AND To fields======================================");
+		
+		if((driver.findElement(SearchFlights.cityFrom).isEnabled()) && (driver.findElement(SearchFlights.cityTo).isEnabled()))
+		{
+			JavascriptExecutor js=(JavascriptExecutor)driver;
+			js.executeScript("arguments[0].style.border='3px solid green'",driver.findElement(SearchFlights.cityFrom));
+			js.executeScript("arguments[0].style.border='3px solid green'",driver.findElement(SearchFlights.cityTo));
+		}
+		Thread.sleep(2000);
+		
+		
+	}
+	
+	
+	
+	
+	
+
+	@Test(priority=2)
+	 public void searchFlight() throws InterruptedException, IOException
 	 {
-		test=extent.createTest("search");
+		test=extent.createTest("Search for a Flight");
+		
+		logger.info("===================================Searching for a desired Flight=======================================");
 	
 	sFlights=new SearchFlights(driver);
-	
-	
-	if(driver.findElement(SearchFlights.cityFrom).isEnabled())
-	{
-		JavascriptExecutor js=(JavascriptExecutor)driver;
-		js.executeScript("arguments[0].style.border='3px solid green'",driver.findElement(SearchFlights.cityFrom));
-	}
-	Thread.sleep(2000);
 	
 	
 	if(tripType.equalsIgnoreCase("round"))
@@ -134,21 +167,19 @@ public class TC001_Booking extends BaseClass {
 	sFlights.selectNumberOfInfants(numberOfInfants);
 	Thread.sleep(2000);
 	sFlights.searchFlights();
+	
+	logger.info("=======================CLicked ON Submit Button======================");
 	Thread.sleep(3000);
-	
-	
-	
 	
 	}
 	
 	
 	
-	@Test(priority=1)
-	public void verifyFlightsAvailabeTitle() throws IOException, InterruptedException
+	
+	@Test(priority=3)
+	public void selectDepartureTimeAndPrice() throws InterruptedException
 	{
-		test=extent.createTest("verifyFlightsAvailableTitle");
-		
-		sFlights=new SearchFlights(driver);
+		test=extent.createTest("Select Departure Time And Budget");
 		
 		bFlights=new BookFlights(driver);
 		
@@ -156,6 +187,29 @@ public class TC001_Booking extends BaseClass {
 		
 		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 		Thread.sleep(3000);
+		
+		Thread.sleep(2000);
+		bFlights.selectDepartureTime();
+		
+		logger.info("======================Selected the departure time======================");
+		
+		Thread.sleep(2000);
+		slider();
+		Thread.sleep(2000);
+		
+	}
+	
+	
+	
+	@Test(priority=4)
+	public void verifyBookFlightPageTitle() throws InterruptedException
+	{
+		
+		test=extent.createTest("Verify Flight Booking Page Title");
+		
+		logger.info("==================================Verifying Booking Page Title============================");
+		
+		
 		String originalTitle=driver.getTitle();
 		Thread.sleep(3000);
 		
@@ -175,11 +229,16 @@ public class TC001_Booking extends BaseClass {
 			System.out.println("different");
 		}
 		
-		Thread.sleep(2000);
-		sFlights.selectDepartureTime();
-		Thread.sleep(2000);
-		slider();
-		Thread.sleep(2000);
+	}
+	
+	
+	
+	@Test(priority=5)
+	public void bookFlight() throws IOException, InterruptedException
+	{
+		test=extent.createTest("Book FLight");
+		
+		
 		
 		scrollDown();
 		Thread.sleep(2000);

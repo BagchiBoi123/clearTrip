@@ -1,0 +1,4 @@
+08:31:06.583 [main] INFO  com.clearTrip.testCases.TC001_Booking - ===================================Searching for a desired Flight=======================================
+08:31:22.234 [main] INFO  com.clearTrip.testCases.TC001_Booking - =======================CLicked ON Submit Button======================
+08:31:30.455 [main] INFO  com.clearTrip.testCases.TC001_Booking - ======================Selected the departure time======================
+08:31:34.973 [main] INFO  com.clearTrip.testCases.TC001_Booking - ==================================Verifying Booking Page Title============================

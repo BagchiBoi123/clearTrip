@@ -1,0 +1,4 @@
+08:23:49.798 [main] INFO  com.clearTrip.testCases.TC001_Booking - ==================================Verifying Booking Page Title============================
+08:30:53.648 [main] INFO  com.clearTrip.testCases.TC001_Booking - ===========================================Launching Browser=========================================
+08:31:04.473 [main] INFO  com.clearTrip.testCases.TC001_Booking - ==============================Verifying Page Title==========================
+08:31:04.487 [main] INFO  com.clearTrip.testCases.TC001_Booking - ====================================Checking From AND To fields======================================

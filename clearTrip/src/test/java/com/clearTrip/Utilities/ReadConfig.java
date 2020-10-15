@@ -52,6 +52,10 @@ public class ReadConfig {
 		return iepath;
 	}
 	
-	
+	public String getBrowser()
+	{
+		String browser=property.getProperty("browser");
+		return browser;
+	}
 
 }

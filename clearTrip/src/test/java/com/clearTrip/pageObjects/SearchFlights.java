@@ -49,8 +49,7 @@ public class SearchFlights {
 	@FindBy(xpath="//input[@id='SearchBtn']")
 	WebElement searchFlights;
 	
-	@FindBy(xpath="//p[contains(text(),'Afternoon')][1]")
-	WebElement departureTime;
+	
 	
 	
 	
@@ -71,10 +70,6 @@ public class SearchFlights {
 		roundTrip.click();
 	}
 	
-	public void selectDepartureTime()
-	{
-		departureTime.click();
-	}
 	
 	
 	public void selectNumberOfAdults(int adults)

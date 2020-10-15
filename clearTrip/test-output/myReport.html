@@ -43,7 +43,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Oct 14, 2020 08:40:17 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Oct 15, 2020 08:30:53 AM</span>
 			</a>
 		</ul>
 	</div>
@@ -59,7 +59,6 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
-					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -102,10 +101,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='50%'><span class='strong'>1</span> test(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>6</span> test(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='50%'>1</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -125,15 +124,15 @@
 			<ul id='test-collection' class='test-collection'>
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>search</span>
-						<span class='test-time'>Oct 14, 2020 08:40:30 PM</span>
+						<span class='test-name'>Verify Page Title</span>
+						<span class='test-time'>Oct 15, 2020 08:31:04 AM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Oct 14, 2020 08:40:30 PM</span>
-	<span class='label end-time'>Oct 14, 2020 08:40:50 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 20s+736ms</span>
+	<span class='label start-time'>Oct 15, 2020 08:31:04 AM</span>
+	<span class='label end-time'>Oct 15, 2020 08:31:04 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+8ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -147,9 +146,9 @@
 		<tbody>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>8:40:50 PM</td>
+				<td class='timestamp'>8:31:04 AM</td>
 				<td class='step-details'>
-						TEST CASE PASSED IS search
+						TEST CASE PASSED IS verifyTitle
 					
 				</td>
 			</tr>
@@ -158,17 +157,17 @@
 </div>
 					</div>
 				</li>
-				<li class='test displayed active  fail' status='fail' bdd='false' test-id='2'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
 					<div class='test-heading'>
-						<span class='test-name'>verifyFlightsAvailableTitle</span>
-						<span class='test-time'>Oct 14, 2020 08:40:50 PM</span>
-						<span class='test-status right fail'>fail</span>
+						<span class='test-name'>Check if from and to textboxes are enabled or not</span>
+						<span class='test-time'>Oct 15, 2020 08:31:04 AM</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Oct 14, 2020 08:40:50 PM</span>
-	<span class='label end-time'>Oct 14, 2020 08:41:49 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 58s+988ms</span>
+	<span class='label start-time'>Oct 15, 2020 08:31:04 AM</span>
+	<span class='label end-time'>Oct 15, 2020 08:31:06 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+96ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -180,36 +179,157 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>8:41:49 PM</td>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:31:06 AM</td>
 				<td class='step-details'>
-						TEST CASE FAILED IS verifyFlightsAvailabeTitle
-					
-				</td>
-			</tr>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>8:41:49 PM</td>
-				<td class='step-details'>
-						TEST CASE FAILED IS org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//p[contains(text(),'11:41')]"}
-  (Session info: chrome=86.0.4240.75)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'PCIN474402', ip: '192.168.1.100', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.75, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\848829\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51556}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 4f3b522378e332a783a5e2fa20fe57b0
-*** Element info: {Using=xpath, value=//p[contains(text(),'11:41')]}
+						TEST CASE PASSED IS smoke
 					
 				</td>
 			</tr>
 		</tbody>
 	</table>
 </div>
-						<ul class='screenshots'>
-							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\848829\git\clearTrip\clearTrip\Screenshots\verifyFlightsAvailabeTitle_2020-10-14-20-41-49.845__.png' src='C:\Users\848829\git\clearTrip\clearTrip\Screenshots\verifyFlightsAvailabeTitle_2020-10-14-20-41-49.845__.png' data-src='C:\Users\848829\git\clearTrip\clearTrip\Screenshots\verifyFlightsAvailabeTitle_2020-10-14-20-41-49.845__.png'></li>
-						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>Search for a Flight</span>
+						<span class='test-time'>Oct 15, 2020 08:31:06 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Oct 15, 2020 08:31:06 AM</span>
+	<span class='label end-time'>Oct 15, 2020 08:31:25 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 18s+664ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:31:25 AM</td>
+				<td class='step-details'>
+						TEST CASE PASSED IS searchFlight
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>Select Departure Time And Budget</span>
+						<span class='test-time'>Oct 15, 2020 08:31:25 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Oct 15, 2020 08:31:25 AM</span>
+	<span class='label end-time'>Oct 15, 2020 08:31:34 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 9s+726ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:31:34 AM</td>
+				<td class='step-details'>
+						TEST CASE PASSED IS selectDepartureTimeAndPrice
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify Flight Booking Page Title</span>
+						<span class='test-time'>Oct 15, 2020 08:31:34 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Oct 15, 2020 08:31:34 AM</span>
+	<span class='label end-time'>Oct 15, 2020 08:31:37 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+6ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:31:37 AM</td>
+				<td class='step-details'>
+						TEST CASE PASSED IS verifyBookFlightPageTitle
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>Book FLight</span>
+						<span class='test-time'>Oct 15, 2020 08:31:37 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Oct 15, 2020 08:31:37 AM</span>
+	<span class='label end-time'>Oct 15, 2020 08:31:46 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 8s+305ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:31:46 AM</td>
+				<td class='step-details'>
+						TEST CASE PASSED IS bookFlight
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
 					</div>
 				</li>
 			</ul>
@@ -241,7 +361,7 @@ Session ID: 4f3b522378e332a783a5e2fa20fe57b0
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Tests
-					<div class='panel-lead'>2</div>
+					<div class='panel-lead'>6</div>
 				</div>
 			</div>
 			<div class='col s2'>
@@ -253,13 +373,13 @@ Session ID: 4f3b522378e332a783a5e2fa20fe57b0
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Oct 14, 2020 08:40:17 PM</div>
+					<div class='panel-lead'>Oct 15, 2020 08:30:53 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Oct 14, 2020 08:40:17 PM</div>
+			 		<div class='panel-lead'>Oct 15, 2020 08:30:53 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
@@ -300,13 +420,13 @@ Session ID: 4f3b522378e332a783a5e2fa20fe57b0
 		<!-- container -->
 		<script>
 			var statusGroup = {
-				passParent: 1,
-				failParent: 1,
+				passParent: 6,
+				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 1,
+				exceptionsParent: 0,
 				
 				passChild: 0,
 				failChild: 0,
@@ -331,7 +451,7 @@ Session ID: 4f3b522378e332a783a5e2fa20fe57b0
 		</script>
 		<script>
 			var timeline = {
-			        "search":20.736,"verifyFlightsAvailableTitle":58.988
+			        "Verify Page Title":0.008,"Check if from and to textboxes are enabled or not":2.096,"Search for a Flight":18.664,"Select Departure Time And Budget":9.726,"Verify Flight Booking Page Title":3.006,"Book FLight":8.305
 			};
 		</script>
 		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/master/v3html/js/extent.js' type='text/javascript'></script>
